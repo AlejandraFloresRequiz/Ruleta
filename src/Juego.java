@@ -268,7 +268,7 @@ public class Juego{
             });
     }
     private void agregarEventosHistorial(Historial historial) {
-         historial.getAceptar().addActionListener((ActionEvent e) -> {
+        historial.getAceptar().addActionListener((ActionEvent e) -> {
             historial.dispose();
             });       
     }
