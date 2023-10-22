@@ -11,11 +11,11 @@ public class CasillaNumero extends Casilla{
         this.b = b;
         this.c = c;
     }
-    public Conjunto esPar(){
+    public Conjunto tipo(){
         return numero % 2 == 0 ? Conjunto.PAR : Conjunto.IMPAR;
     }
     public Conjunto color(){
-        return super.getColor().equals(Color.BLACK) ? Conjunto.NEGRO : Conjunto.ROJO;
+        return color.equals(Color.BLACK) ? Conjunto.NEGRO : Conjunto.ROJO;
     }
     public Conjunto getConjuntoA(){
         return a;
@@ -25,5 +25,5 @@ public class CasillaNumero extends Casilla{
     }
     public Conjunto getConjuntoC(){
         return c;
-    }
+    } 
 }

@@ -1,7 +1,14 @@
 import pantallas.Inicio;
+import javax.swing.UIManager;
 public class Prueba{
     public static void main(String... args){
-        Inicio i = new Inicio();
-        Juego j = new Juego(i);
+        try {
+            UIManager.setLookAndFeel(new com.jtattoo.plaf.aluminium.AluminiumLookAndFeel());      
+            Inicio i = new Inicio();
+            Juego j = new Juego(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }  
     }
 }
+        

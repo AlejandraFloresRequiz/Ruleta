@@ -34,42 +34,42 @@ public class Principal extends JFrame{
     } 
     private void crearCasillas(){
         casillas = new ArrayList();
-        casillas.add(new CasillaNumero("1", new Color(204, 0, 0), 40, 40, 350, 260, 1, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("2", Color.BLACK, 40, 40, 350, 220, 2, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("3", new Color(204, 0, 0), 40, 40, 350, 180, 3, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("4", Color.BLACK, 40, 40, 390, 260, 4, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("5", new Color(204, 0, 0), 40, 40, 390, 220, 5, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("6", Color.BLACK, 40, 40, 390, 180, 6, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("7", new Color(204, 0, 0), 40, 40, 430, 260, 4, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("8", Color.BLACK, 40, 40, 430, 220, 5, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("9", new Color(204, 0, 0), 40, 40, 430, 180, 6, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("10", Color.BLACK, 40, 40, 470, 260, 10, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("11", Color.BLACK, 40, 40, 470, 220, 11, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("12", new Color(204, 0, 0), 40, 40, 470, 180, 12, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("13", Color.BLACK, 40, 40, 510, 260, 13, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("14", new Color(204, 0, 0), 40, 40, 510, 220, 14, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("15", Color.BLACK, 40, 40, 510, 180, 15, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("16", new Color(204, 0, 0), 40, 40, 550, 260, 16, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("17", Color.BLACK, 40, 40, 550, 220, 17, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("18", new Color(204, 0, 0), 40, 40, 550, 180, 18, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.UNO_DIECIOCHO));
-        casillas.add(new CasillaNumero("19", new Color(204, 0, 0), 40, 40, 590, 260, 19, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("20", Color.BLACK, 40, 40, 590, 220, 20, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("21", new Color(204, 0, 0), 40, 40, 590, 180, 21, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("22", Color.BLACK, 40, 40, 630, 260, 22, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("23", new Color(204, 0, 0), 40, 40, 630, 220, 23, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("24", Color.BLACK, 40, 40, 630, 180, 24, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("25", new Color(204, 0, 0), 40, 40, 670, 260, 25, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("26", Color.BLACK, 40, 40, 670, 220, 26, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("27", new Color(204, 0, 0), 40, 40, 670, 180, 27, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("28", Color.BLACK, 40, 40, 710, 260, 28, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("29", Color.BLACK, 40, 40, 710, 220, 29, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("30", new Color(204, 0, 0), 40, 40, 710, 180, 30, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("31", Color.BLACK, 40, 40, 750, 260, 31, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("32", new Color(204, 0, 0), 40, 40, 750, 220, 32, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("33", Color.BLACK, 40, 40, 750, 180, 33, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("34", new Color(204, 0, 0), 40, 40, 790, 260, 34, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("35", Color.BLACK, 40, 40, 790, 220, 35, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
-        casillas.add(new CasillaNumero("36", new Color(204, 0, 0), 40, 40, 790, 180, 36, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.DIECINUEVE_TRENTAYSEIS));
+        casillas.add(new CasillaNumero("1", new Color(204, 0, 0), 40, 40, 350, 260, 1, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("2", Color.BLACK, 40, 40, 350, 220, 2, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("3", new Color(204, 0, 0), 40, 40, 350, 180, 3, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("4", Color.BLACK, 40, 40, 390, 260, 4, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("5", new Color(204, 0, 0), 40, 40, 390, 220, 5, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("6", Color.BLACK, 40, 40, 390, 180, 6, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("7", new Color(204, 0, 0), 40, 40, 430, 260, 4, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("8", Color.BLACK, 40, 40, 430, 220, 5, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("9", new Color(204, 0, 0), 40, 40, 430, 180, 6, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("10", Color.BLACK, 40, 40, 470, 260, 10, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("11", Color.BLACK, 40, 40, 470, 220, 11, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("12", new Color(204, 0, 0), 40, 40, 470, 180, 12, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("13", Color.BLACK, 40, 40, 510, 260, 13, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("14", new Color(204, 0, 0), 40, 40, 510, 220, 14, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("15", Color.BLACK, 40, 40, 510, 180, 15, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("16", new Color(204, 0, 0), 40, 40, 550, 260, 16, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("17", Color.BLACK, 40, 40, 550, 220, 17, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("18", new Color(204, 0, 0), 40, 40, 550, 180, 18, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("19", new Color(204, 0, 0), 40, 40, 590, 260, 19, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("20", Color.BLACK, 40, 40, 590, 220, 20, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("21", new Color(204, 0, 0), 40, 40, 590, 180, 21, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("22", Color.BLACK, 40, 40, 630, 260, 22, Conjunto.FILA_1, Conjunto.SEGUNDOS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("23", new Color(204, 0, 0), 40, 40, 630, 220, 23, Conjunto.FILA_2, Conjunto.SEGUNDOS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("24", Color.BLACK, 40, 40, 630, 180, 24, Conjunto.FILA_3, Conjunto.SEGUNDOS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("25", new Color(204, 0, 0), 40, 40, 670, 260, 25, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("26", Color.BLACK, 40, 40, 670, 220, 26, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("27", new Color(204, 0, 0), 40, 40, 670, 180, 27, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("28", Color.BLACK, 40, 40, 710, 260, 28, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("29", Color.BLACK, 40, 40, 710, 220, 29, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("30", new Color(204, 0, 0), 40, 40, 710, 180, 30, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("31", Color.BLACK, 40, 40, 750, 260, 31, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("32", new Color(204, 0, 0), 40, 40, 750, 220, 32, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("33", Color.BLACK, 40, 40, 750, 180, 33, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("34", new Color(204, 0, 0), 40, 40, 790, 260, 34, Conjunto.FILA_1, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("35", Color.BLACK, 40, 40, 790, 220, 35, Conjunto.FILA_2, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
+        casillas.add(new CasillaNumero("36", new Color(204, 0, 0), 40, 40, 790, 180, 36, Conjunto.FILA_3, Conjunto.TERCEROS_DOCE, Conjunto.ALTO));
         casillas.add(new CasillaEspecial("00", new Color(102,153,255), 60, 40, 310, 180, Conjunto.DOBLE_CERO));
         casillas.add(new CasillaEspecial("0", new Color(102,153,255), 60, 40, 310, 240, Conjunto.CERO));
         casillas.add(new CasillaEspecial("1st 12", new Color(102,153,255), 40, 160, 350, 300, Conjunto.PRIMEROS_DOCE));
@@ -78,12 +78,12 @@ public class Principal extends JFrame{
         casillas.add(new CasillaEspecial("2to1", new Color(102,153,255), 40, 60, 830, 260, Conjunto.FILA_1));
         casillas.add(new CasillaEspecial("2to1", new Color(102,153,255), 40, 60, 830, 220, Conjunto.FILA_2));
         casillas.add(new CasillaEspecial("2to1", new Color(102,153,255), 40, 60, 830, 180, Conjunto.FILA_3));
-        casillas.add(new CasillaEspecial("1-18", new Color(102,153,255), 40, 80, 350, 340, Conjunto.UNO_DIECIOCHO));
+        casillas.add(new CasillaEspecial("1-18", new Color(102,153,255), 40, 80, 350, 340, Conjunto.BAJO));
         casillas.add(new CasillaEspecial("EVEN", new Color(102,153,255), 40, 80, 430, 340, Conjunto.PAR));
         casillas.add(new CasillaEspecial("", new Color(204, 0, 0), 40, 80, 510, 340, Conjunto.ROJO));
         casillas.add(new CasillaEspecial("", Color.BLACK, 40, 80, 590, 340, Conjunto.NEGRO));
         casillas.add(new CasillaEspecial("ODD", new Color(102,153,255), 40, 80, 670, 340, Conjunto.IMPAR));
-        casillas.add(new CasillaEspecial("19-36", new Color(102,153,255), 40, 80, 750, 340, Conjunto.DIECINUEVE_TRENTAYSEIS));  
+        casillas.add(new CasillaEspecial("19-36", new Color(102,153,255), 40, 80, 750, 340, Conjunto.ALTO));  
     }
     private void iniciarComponentes(){        
         this.setLayout(null);
@@ -94,7 +94,7 @@ public class Principal extends JFrame{
         panel.setBackground(new Color(0,153,51));
 
         btnTerminar = new JButton("Terminar");        
-        btnTerminar.setBackground(new Color(10, 232, 243));
+        //btnTerminar.setBackground(new Color(10, 232, 243));
         btnTerminar.setFont(new Font("Segoe UI", 1, 18));
         btnTerminar.setBounds(25, 25, 130, 40);
         btnTerminar.setBorderPainted(false);
@@ -110,8 +110,7 @@ public class Principal extends JFrame{
         
         cajaApuesta = new JTextField("$ 0000");
         cajaApuesta.setEditable(false); 
-        cajaApuesta.setAlignmentX(CENTER_ALIGNMENT); 
-        cajaApuesta.setAlignmentY(CENTER_ALIGNMENT);
+        cajaApuesta.setHorizontalAlignment(JTextField.CENTER);
         cajaApuesta.setForeground(Color.BLACK);
         cajaApuesta.setFont(new Font("Segoe UI", 1, 20));
         cajaApuesta.setBounds(450, 50, 100, 30);                 
@@ -127,8 +126,7 @@ public class Principal extends JFrame{
         
         cajaSaldo = new JTextField("$ 0000");
         cajaSaldo.setEditable(false); 
-        cajaSaldo.setAlignmentX(CENTER_ALIGNMENT); 
-        cajaSaldo.setAlignmentY(CENTER_ALIGNMENT);
+        cajaSaldo.setHorizontalAlignment(JTextField.CENTER);
         cajaSaldo.setForeground(Color.BLACK);
         cajaSaldo.setFont(new Font("Segoe UI", 1, 20));
         cajaSaldo.setBounds(736, 50, 100, 30);                 
@@ -136,25 +134,25 @@ public class Principal extends JFrame{
 
         ruleta = new JLabel();
         ruleta.setBounds(50, 140, 288, 288);        
-         ruleta.setIcon(new ImageIcon(getClass().getResource("/imagenes/ruletaQuieta.png")));   
+        ruleta.setIcon(new ImageIcon(getClass().getResource("/imagenes/ruletaQuieta.png")));   
         panel.add(ruleta);
         
         btnPlay = new JButton("Play");        
-        btnPlay.setBackground(new Color(10, 232, 243));
+        //btnPlay.setBackground(new Color(10, 232, 243));
         btnPlay.setFont(new Font("Segoe UI", 1, 18));
         btnPlay.setBounds(110, 420, 80, 40);
         btnPlay.setBorderPainted(false);
         panel.add(btnPlay);      
                 
         btnHistorial = new JButton("Historial");        
-        btnHistorial.setBackground(new Color(10, 232, 243));
+        //btnHistorial.setBackground(new Color(10, 232, 243));
         btnHistorial.setFont(new Font("Segoe UI", 1, 18));
         btnHistorial.setBounds(400, 540, 120, 40);
         btnHistorial.setBorderPainted(false);
         panel.add(btnHistorial);   
         
         btnLimpiar = new JButton("Limpiar");        
-        btnLimpiar.setBackground(new Color(10, 232, 243)); 
+        //btnLimpiar.setBackground(new Color(10, 232, 243)); 
         btnLimpiar.setFont(new Font("Segoe UI", 1, 18));
         btnLimpiar.setBounds(700, 540, 120, 40);
         btnLimpiar.setBorderPainted(false);

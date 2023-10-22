@@ -6,11 +6,11 @@ import javax.swing.BorderFactory;
 import java.awt.Font;
 import java.util.Stack;
 public class Casilla extends JButton{
-    private String texto;
-    private Color color;
-    private int alto, ancho, x, y, dinero;
-    private boolean seleccionado;
-    private Stack<Ficha> fichas;
+    protected String texto;
+    protected Color color;
+    protected int alto, ancho, x, y, dinero;
+    protected boolean seleccionado;
+    protected Stack<Ficha> fichas;
     public Casilla(String texto, Color color, int alto, int ancho, int x, int y){
         this.texto = texto;
         this.color = color;
@@ -64,11 +64,13 @@ public class Casilla extends JButton{
             restablecer();
         }        
     }
-    private void restablecer(){
+    public void restablecer(){
         setIcon(null);
         setText(texto);
         setFont(new Font("Segoe UI", 1, 24));
         setBackground(color);
-        setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));        
+        setBorder(BorderFactory.createLineBorder(Color.WHITE, 2)); 
+        fichas.clear();
+        dinero = 0;
     }
 }
