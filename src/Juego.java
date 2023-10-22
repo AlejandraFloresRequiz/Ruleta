@@ -15,18 +15,21 @@ import objetos.CasillaEspecial;
 import objetos.Conjunto;
 import pantallas.Inicio;
 import pantallas.Principal;
+import pantallas.VentanaReglas;
 public class Juego{
-    private int saldo, perdida, apuesta, jugadasGanadas, jugadasPerdidas;
+    private int saldo, numJugada, apuesta;
     private Ficha fichaActual;
     private Inicio inicio;
     private Principal principal;
     private ImageIcon icono;
     private SecureRandom sr;
+    private ArrayList<String[]> jugadas;
     public Juego(Inicio inicio){
         this.inicio = inicio;
+        jugadas = new ArrayList();
         sr = new SecureRandom();
         saldo = 100 + sr.nextInt(81) * 5;
-        perdida = apuesta = jugadasGanadas = jugadasPerdidas = 0;
+        numJugada = apuesta = 0;
         fichaActual = null;
         icono = new ImageIcon(getClass().getResource("/imagenes/fichas.png"));
         agregarEventosInicio();
@@ -40,8 +43,9 @@ public class Juego{
             principal.setVisible(true);
             });
         inicio.getBtnVerReglas().addActionListener((ActionEvent e) -> {
-            
-                
+            VentanaReglas reglas = new VentanaReglas(inicio);
+                agregarEventosReglas(reglas);
+                reglas.setVisible(true);
             });
         inicio.getSalir().addActionListener((ActionEvent e) -> {
             System.exit(0);                
@@ -68,7 +72,7 @@ public class Juego{
             });
         principal.getBtnTerminar().addActionListener((ActionEvent e) -> {
             if(apuesta == 0){
-                String m = "Terminaste con un saldo de: " + saldo;
+                String m = "Terminaste con un saldo de: $" + saldo;
                 JOptionPane.showMessageDialog(principal, "<html><font size='5'>"+ m + "</font></html>", "Gracias por jugar :)", 1, icono);
                 principal.dispose();
                 inicio.setVisible(true);
@@ -226,15 +230,18 @@ public class Juego{
             CasillaEspecial g = (CasillaEspecial)ganador;
             ganancia += (g.getDinero() * 35) + g.getDinero();
         }
+        String res = "";
         if(ganancia > 0){
-            JLabel label2 = new JLabel("Ganaste: " + ganancia, SwingConstants.CENTER);
+            res = "Si";
+            JLabel label2 = new JLabel("GANAS $" + ganancia, SwingConstants.CENTER);
             label2.setFont(new Font("Arial", Font.BOLD, 50));
             //label2.setForeground(Color.GREEN);
             //label2.setBackground(Color.WHITE);
             label2.setOpaque(true); 
             JOptionPane.showMessageDialog(principal, label2, ":)", 1, null);            
         }else{
-            JLabel label2 = new JLabel("Perdiste", SwingConstants.CENTER);
+            res = "No";
+            JLabel label2 = new JLabel("PIERDES", SwingConstants.CENTER);
             label2.setFont(new Font("Arial", Font.BOLD, 50));
             //label2.setForeground(Color.RED);
             //label2.setBackground(Color.WHITE);
@@ -244,10 +251,20 @@ public class Juego{
         for(Casilla c : casillas){
             c.restablecer();
         }
+
+        numJugada++;
+        String[] fila = {String.valueOf(numJugada), String.valueOf(apuesta), String.valueOf(saldo), ganador.getText(), res};
+        jugadas.add(fila);
+
         saldo += ganancia;
         apuesta = 0;
         fichaActual = null;
         principal.actulizarApuesta(apuesta);
         principal.actulizarSaldo(saldo);
+    }
+    private void agregarEventosReglas(VentanaReglas reglas) {
+        reglas.getAcetar().addActionListener((ActionEvent e) -> {
+            reglas.dispose();
+            });
     }
 }

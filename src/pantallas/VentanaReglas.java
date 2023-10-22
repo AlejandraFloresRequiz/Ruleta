@@ -1,22 +1,25 @@
 package pantallas;
+
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 public class VentanaReglas extends JDialog{
-    public VentanaReglas() {
+    private JButton jButton1;   
+    public VentanaReglas(JFrame padre) {
+        super(padre, "REGLAS", true);
         initComponents();
+        setLocationRelativeTo(padre);   
     }
-
     private void initComponents() {
-        JButton jButton1 = new JButton("Aceptar");
+        jButton1 = new JButton("Aceptar");
         JScrollPane jScrollPane1 = new JScrollPane();
         JTextPane jTextPane1 = new JTextPane();
         SimpleAttributeSet attributeSet = new SimpleAttributeSet();
 
-        // Configura el texto con formato deseado
         String textoConFormato = "                                     REGLAS  DEL  JUEGO                             "
                              +"\n"
                              +"\n1. Apuesta a un solo número (Straight-up bet)"     
@@ -40,26 +43,23 @@ public class VentanaReglas extends JDialog{
                              +"\n Número asociado: 1";
                                                 
         
-        // Establece el texto en el JTextPane
         jTextPane1.setText(textoConFormato);
 
-         // Deshabilita la edición del JTextArea
         jTextPane1.setEditable(false);
 
-        // Configura el estilo deseado (por ejemplo, negrita)
         StyleConstants.setBold(attributeSet, true);
 
-        // Aplica el estilo al texto deseado
         jTextPane1.getStyledDocument().setCharacterAttributes(0, 37, attributeSet, false);
 
-        jButton1.setText("Aceptar");
 
+        jTextPane1.setCaretPosition(0);
+
+        jButton1.setText("Aceptar");
+      
         jScrollPane1.setViewportView(jTextPane1);
 
-        // Establece la orientación de la barra de desplazamiento vertical a la derecha
         jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        // Deja el ActionListener del botón vacío para que no realice ninguna acción
         jButton1.addActionListener(e -> {});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -86,16 +86,9 @@ public class VentanaReglas extends JDialog{
                 .addGap(44, 44, 44)
             )
         );
-
         pack();
     }
-
-    public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run() {
-                new VentanaReglas().setVisible(true);
-            }
-        });
+    public JButton getAcetar(){
+        return jButton1;
     }
 }

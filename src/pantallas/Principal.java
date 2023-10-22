@@ -108,7 +108,7 @@ public class Principal extends JFrame{
         apuesta.setBounds(300, 30, 200, 70);        
         panel.add(apuesta);         
         
-        cajaApuesta = new JTextField("$ 0000");
+        cajaApuesta = new JTextField("$0000");
         cajaApuesta.setEditable(false); 
         cajaApuesta.setHorizontalAlignment(JTextField.CENTER);
         cajaApuesta.setForeground(Color.BLACK);
@@ -124,7 +124,7 @@ public class Principal extends JFrame{
         saldo.setBounds(600, 30, 200, 70);        
         panel.add(saldo);         
         
-        cajaSaldo = new JTextField("$ 0000");
+        cajaSaldo = new JTextField("$0000");
         cajaSaldo.setEditable(false); 
         cajaSaldo.setHorizontalAlignment(JTextField.CENTER);
         cajaSaldo.setForeground(Color.BLACK);
@@ -213,10 +213,10 @@ public class Principal extends JFrame{
         btnHistorial.setEnabled(true);
     }
     public void actulizarApuesta(int a){
-        cajaApuesta.setText("$ " + String.valueOf(a));
+        cajaApuesta.setText("$" + String.valueOf(a));
     }
     public void actulizarSaldo(int a){
-        cajaSaldo.setText("$ " + String.valueOf(a));
+        cajaSaldo.setText("$" + String.valueOf(a));
     }
     public void girarRuleta(){
         ruleta.setIcon(new ImageIcon(getClass().getResource("/imagenes/ruleta.gif")));
