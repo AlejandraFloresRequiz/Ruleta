@@ -40,9 +40,9 @@ public class Principal extends JFrame{
         casillas.add(new CasillaNumero("4", Color.BLACK, 40, 40, 390, 260, 4, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
         casillas.add(new CasillaNumero("5", new Color(204, 0, 0), 40, 40, 390, 220, 5, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
         casillas.add(new CasillaNumero("6", Color.BLACK, 40, 40, 390, 180, 6, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
-        casillas.add(new CasillaNumero("7", new Color(204, 0, 0), 40, 40, 430, 260, 4, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
-        casillas.add(new CasillaNumero("8", Color.BLACK, 40, 40, 430, 220, 5, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
-        casillas.add(new CasillaNumero("9", new Color(204, 0, 0), 40, 40, 430, 180, 6, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("7", new Color(204, 0, 0), 40, 40, 430, 260, 7, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("8", Color.BLACK, 40, 40, 430, 220, 8, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
+        casillas.add(new CasillaNumero("9", new Color(204, 0, 0), 40, 40, 430, 180, 9, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
         casillas.add(new CasillaNumero("10", Color.BLACK, 40, 40, 470, 260, 10, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
         casillas.add(new CasillaNumero("11", Color.BLACK, 40, 40, 470, 220, 11, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
         casillas.add(new CasillaNumero("12", new Color(204, 0, 0), 40, 40, 470, 180, 12, Conjunto.FILA_3, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
@@ -94,7 +94,6 @@ public class Principal extends JFrame{
         panel.setBackground(new Color(0,153,51));
 
         btnTerminar = new JButton("Terminar");        
-        //btnTerminar.setBackground(new Color(10, 232, 243));
         btnTerminar.setFont(new Font("Segoe UI", 1, 18));
         btnTerminar.setBounds(25, 25, 130, 40);
         btnTerminar.setBorderPainted(false);
@@ -138,21 +137,18 @@ public class Principal extends JFrame{
         panel.add(ruleta);
         
         btnPlay = new JButton("Play");        
-        //btnPlay.setBackground(new Color(10, 232, 243));
         btnPlay.setFont(new Font("Segoe UI", 1, 18));
         btnPlay.setBounds(110, 420, 80, 40);
         btnPlay.setBorderPainted(false);
         panel.add(btnPlay);      
                 
         btnHistorial = new JButton("Historial");        
-        //btnHistorial.setBackground(new Color(10, 232, 243));
         btnHistorial.setFont(new Font("Segoe UI", 1, 18));
         btnHistorial.setBounds(400, 540, 120, 40);
         btnHistorial.setBorderPainted(false);
         panel.add(btnHistorial);   
         
         btnLimpiar = new JButton("Limpiar");        
-        //btnLimpiar.setBackground(new Color(10, 232, 243)); 
         btnLimpiar.setFont(new Font("Segoe UI", 1, 18));
         btnLimpiar.setBounds(700, 540, 120, 40);
         btnLimpiar.setBorderPainted(false);

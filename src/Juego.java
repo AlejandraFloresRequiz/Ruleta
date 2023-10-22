@@ -16,6 +16,7 @@ import objetos.Conjunto;
 import pantallas.Inicio;
 import pantallas.Principal;
 import pantallas.VentanaReglas;
+import pantallas.Historial;
 public class Juego{
     private int saldo, numJugada, apuesta;
     private Ficha fichaActual;
@@ -67,7 +68,9 @@ public class Juego{
             }                
             });
         principal.getBtnHistorial().addActionListener((ActionEvent e) -> {
-            
+            Historial historial = new Historial(principal, jugadas);
+            agregarEventosHistorial(historial);
+            historial.setVisible(true);
                 
             });
         principal.getBtnTerminar().addActionListener((ActionEvent e) -> {
@@ -75,8 +78,9 @@ public class Juego{
                 String m = "Terminaste con un saldo de: $" + saldo;
                 JOptionPane.showMessageDialog(principal, "<html><font size='5'>"+ m + "</font></html>", "Gracias por jugar :)", 1, icono);
                 principal.dispose();
+                reiniciarJuego();
                 inicio.setVisible(true);
-                //restablecerTodo
+                
             }else{
                 JOptionPane.showMessageDialog(principal, "<html><font size='5'>Retira tus fichas del tablero</font></html>", "Antes de retirarte", 1, icono); 
             }              
@@ -206,7 +210,7 @@ public class Juego{
         }        
         int indiceAleatorio = sr.nextInt(38);
         Casilla ganador = numeros[indiceAleatorio]; 
-        JLabel label = new JLabel(ganador.getText(), SwingConstants.CENTER);
+        JLabel label = new JLabel(ganador.getTexto(), SwingConstants.CENTER);
         label.setFont(new Font("Arial", Font.BOLD, 80));
         label.setForeground(Color.WHITE);
         label.setBackground(ganador.getColor());
@@ -235,16 +239,12 @@ public class Juego{
             res = "Si";
             JLabel label2 = new JLabel("GANAS $" + ganancia, SwingConstants.CENTER);
             label2.setFont(new Font("Arial", Font.BOLD, 50));
-            //label2.setForeground(Color.GREEN);
-            //label2.setBackground(Color.WHITE);
             label2.setOpaque(true); 
             JOptionPane.showMessageDialog(principal, label2, ":)", 1, null);            
         }else{
             res = "No";
             JLabel label2 = new JLabel("PIERDES", SwingConstants.CENTER);
             label2.setFont(new Font("Arial", Font.BOLD, 50));
-            //label2.setForeground(Color.RED);
-            //label2.setBackground(Color.WHITE);
             label2.setOpaque(true); 
             JOptionPane.showMessageDialog(principal, label2, ":(", 1, null);               
         }
@@ -266,5 +266,16 @@ public class Juego{
         reglas.getAcetar().addActionListener((ActionEvent e) -> {
             reglas.dispose();
             });
+    }
+    private void agregarEventosHistorial(Historial historial) {
+         historial.getAceptar().addActionListener((ActionEvent e) -> {
+            historial.dispose();
+            });       
+    }
+    private void reiniciarJuego() {
+        saldo = 100 + sr.nextInt(81) * 5;
+        numJugada = apuesta = 0;
+        fichaActual = null;
+        jugadas.clear();
     }
 }

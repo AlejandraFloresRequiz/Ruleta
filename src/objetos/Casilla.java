@@ -9,7 +9,6 @@ public class Casilla extends JButton{
     protected String texto;
     protected Color color;
     protected int alto, ancho, x, y, dinero;
-    protected boolean seleccionado;
     protected Stack<Ficha> fichas;
     public Casilla(String texto, Color color, int alto, int ancho, int x, int y){
         this.texto = texto;
@@ -20,7 +19,6 @@ public class Casilla extends JButton{
         this.y = y;
         fichas = new Stack();
         dinero = 0;
-        seleccionado = false;
         
         setText(texto);
         setForeground(Color.WHITE);
@@ -29,14 +27,14 @@ public class Casilla extends JButton{
         setBackground(color);
         setBounds(x, y, ancho, alto);        
     }
+    public String getTexto(){
+        return texto;
+    }
     public Color getColor(){
         return color;
     }
     public int getDinero(){
         return dinero;
-    }
-    public boolean getSeleccionado(){
-        return seleccionado;
     }   
     public void sumarDinero(int d){
         dinero += d;        

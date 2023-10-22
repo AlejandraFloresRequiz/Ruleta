@@ -1,27 +1,22 @@
 package pantallas;
+
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
-
 public class Historial extends JDialog {
-    private String[] partida;
     private DefaultTableModel modelo;
     private JTable tabla;
     private JButton aceptar;
-    private JPanel panel, btnPanel; // Panel adicional para el botón
+    private JPanel panel, btnPanel;
     
-    public Historial(Frame parent, int numeroPartida, ArrayList<String[]> partidas) {
-        super(parent, "Partida " + numeroPartida, true);
+    public Historial(JFrame padre, ArrayList<String[]> partidas) {
+        super(padre, "HISTORIAL", true);
         iniciarComponentes(partidas);
-        setSize(300, 150);
-        setVisible(true);
+        setLocationRelativeTo(padre);   
+        setSize(300, 200);
     }
-    
-    public String[] getPartida() {
-        return partida;
-    }
-    
     private void iniciarComponentes(ArrayList<String[]> partidas) {
         panel = new JPanel();
         panel.setLayout(new BorderLayout());
@@ -38,10 +33,16 @@ public class Historial extends JDialog {
              modelo.addRow(fila);
         }
         
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        for(int i = 0; i < tabla.getColumnCount(); i++){
+            tabla.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+        }
+        
         JScrollPane scrollPane = new JScrollPane(tabla);
         panel.add(scrollPane, BorderLayout.CENTER);
 
-        // Creando el botón aceptar y añadiéndolo a un panel adicional
+   
         aceptar = new JButton("Aceptar");
         btnPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         btnPanel.add(aceptar);

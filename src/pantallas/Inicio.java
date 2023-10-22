@@ -38,19 +38,16 @@ public class Inicio extends JFrame{
         panel.add(bienvenido);        
         
         btnIniciar = new JButton("Iniciar juego");        
-        //btnIniciar.setBackground(new Color(0, 153, 102));
         btnIniciar.setFont(new Font("Segoe UI", 1, 18));
         btnIniciar.setBounds(290, 180, 140, 50);
         panel.add(btnIniciar);
         
         btnVerReglas = new JButton("Ver reglas del juego");
-        //btnVerReglas.setBackground(new Color(0, 153, 102));
         btnVerReglas.setFont(new Font("Segoe UI", 1, 18));
         btnVerReglas.setBounds(250, 290, 210, 50);
         panel.add(btnVerReglas);
         
         salir = new JButton("Salir");
-        //salir.setBackground(new Color(0, 153, 153));
         salir.setFont(new Font("Segoe UI", 1, 12)); 
         salir.setBounds(600, 420, 80, 30);
         panel.add(salir);        
