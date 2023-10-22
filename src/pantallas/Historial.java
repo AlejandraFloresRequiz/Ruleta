@@ -5,7 +5,6 @@ import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 
 public class Historial extends JDialog {
-    private JTextField[] inputFields;
     private String[] partida;
     private DefaultTableModel modelo;
     private JTable tabla;
