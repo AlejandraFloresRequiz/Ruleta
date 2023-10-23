@@ -1,5 +1,10 @@
 package pantallas;
 
+/**
+ * @author Denis y Alejandra
+ * @version 1
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JFrame;

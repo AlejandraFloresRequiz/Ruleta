@@ -1,5 +1,10 @@
 package objetos;
 
+/**
+ * @author Denis y Alejandra
+ * @version 1
+ */
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 public class Ficha extends JLabel{

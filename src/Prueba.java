@@ -1,3 +1,8 @@
+/**
+ * @author Denis y Alejandra
+ * @version 2
+ */
+
 import pantallas.Inicio;
 import javax.swing.UIManager;
 public class Prueba{

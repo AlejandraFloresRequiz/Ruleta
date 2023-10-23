@@ -1,6 +1,12 @@
 package objetos;
 
+/**
+ * @author Denis y Alejandra
+ * @version 1
+ */
+
 import java.awt.Color;
+//Herencia
 public class CasillaNumero extends Casilla{
     private int numero;
     private Conjunto a, b, c;
@@ -26,4 +32,8 @@ public class CasillaNumero extends Casilla{
     public Conjunto getConjuntoC(){
         return c;
     } 
+    @Override
+    public String informacionCasilla(){
+        return "Numero: " + numero + "\nTipo: " + tipo().toString() + "\n" + super.informacionCasilla();
+    }        
 }

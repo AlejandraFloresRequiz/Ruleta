@@ -1,5 +1,10 @@
 package pantallas;
 
+/**
+ * @author Denis y Alejandra
+ * @version 2
+ */
+
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JButton;

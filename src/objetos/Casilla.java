@@ -1,15 +1,22 @@
 package objetos;
 
+/**
+ * @author Denis y Alejandra
+ * @version 1
+ */
+
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import java.awt.Font;
 import java.util.Stack;
-public class Casilla extends JButton{
+public class Casilla extends JButton implements FuncionesCasilla{
+    // Encapsulamiento
     protected String texto;
     protected Color color;
-    protected int alto, ancho, x, y, dinero;
-    protected Stack<Ficha> fichas;
+    private int alto, ancho, x, y;
+    protected int dinero;
+    private Stack<Ficha> fichas;
     public Casilla(String texto, Color color, int alto, int ancho, int x, int y){
         this.texto = texto;
         this.color = color;
@@ -26,6 +33,9 @@ public class Casilla extends JButton{
         setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
         setBackground(color);
         setBounds(x, y, ancho, alto);        
+    }  
+    public int getDinero(){
+        return dinero;
     }
     public String getTexto(){
         return texto;
@@ -33,17 +43,11 @@ public class Casilla extends JButton{
     public Color getColor(){
         return color;
     }
-    public int getDinero(){
-        return dinero;
-    }   
-    public void sumarDinero(int d){
-        dinero += d;        
-    }
     public void agregarFicha(Ficha f){
         dinero += f.getValor();
         fichas.add(f);
         actualizarCasilla();
-    }
+    } 
     public Ficha quitarFicha(){
         if(!fichas.isEmpty()){
             Ficha f = fichas.pop();
@@ -70,5 +74,9 @@ public class Casilla extends JButton{
         setBorder(BorderFactory.createLineBorder(Color.WHITE, 2)); 
         fichas.clear();
         dinero = 0;
+    }
+    public String informacionCasilla(){
+        String c = color.equals(Color.BLACK) ? "Negro" : color.equals(new Color(204, 0, 0)) ? "Rojo" : "Celeste";
+        return "Color: " + c + "\nDinero: " + dinero;
     }
 }

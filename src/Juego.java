@@ -1,3 +1,7 @@
+/**
+ * @author Denis y Alejandra
+ * @version 2
+ */
 
 import java.awt.event.ActionEvent;
 import javax.swing.*;
@@ -7,7 +11,6 @@ import java.util.ArrayList;
 import java.awt.Font;
 import java.awt.Color;
 import java.security.SecureRandom;
-import javax.swing.ImageIcon;
 import objetos.Ficha;
 import objetos.Casilla;
 import objetos.CasillaNumero;
@@ -192,6 +195,7 @@ public class Juego{
         Casilla[] numeros = new Casilla[38];
         CasillaEspecial[] conjuntos = new CasillaEspecial[12];
         int i = 0, j = 0;
+        //Conversiones
         for(Casilla c : casillas){
             if(c instanceof CasillaNumero){
                 CasillaNumero n = (CasillaNumero)c;
@@ -210,7 +214,7 @@ public class Juego{
         }        
         int indiceAleatorio = sr.nextInt(38);
         Casilla ganador = numeros[indiceAleatorio]; 
-        JLabel label = new JLabel(ganador.getTexto(), SwingConstants.CENTER);
+        JLabel label = new JLabel(ganador.getText(), SwingConstants.CENTER);
         label.setFont(new Font("Arial", Font.BOLD, 80));
         label.setForeground(Color.WHITE);
         label.setBackground(ganador.getColor());

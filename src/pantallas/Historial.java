@@ -1,5 +1,10 @@
 package pantallas;
 
+/**
+ * @author Denis y Alejandra
+ * @version 2
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.table.DefaultTableCellRenderer;

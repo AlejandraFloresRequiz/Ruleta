@@ -1,5 +1,10 @@
 package pantallas;
 
+/**
+ * @author Denis y Alejandra
+ * @version 1
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JFrame;
@@ -18,7 +23,7 @@ import objetos.Ficha;
 public class Principal extends JFrame{
     private JButton btnTerminar, btnLimpiar, btnPlay, btnHistorial;
     private Ficha f5, f10, f15, f25, f50, f75;
-    private ArrayList<Casilla> casillas;
+    private ArrayList<Casilla> casillas; //Polimorfismo
     private JLabel apuesta, saldo, ruleta;
     private JTextField cajaApuesta, cajaSaldo;
     private JPanel panel;
@@ -33,6 +38,7 @@ public class Principal extends JFrame{
         this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);        
     } 
     private void crearCasillas(){
+        //Enmascaramiento
         casillas = new ArrayList();
         casillas.add(new CasillaNumero("1", new Color(204, 0, 0), 40, 40, 350, 260, 1, Conjunto.FILA_1, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
         casillas.add(new CasillaNumero("2", Color.BLACK, 40, 40, 350, 220, 2, Conjunto.FILA_2, Conjunto.PRIMEROS_DOCE, Conjunto.BAJO));
